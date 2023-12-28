@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "loggerhead-luminancies",
+  "version": "${version}",
+  "name": "Loggerhead Luminancies",
+  "description": "A simple decoration mod to add turtle lights.",
+  "authors": [
+    "Garden System"
+  ],
+  "contact": {
+    "homepage": "https://github.com/HestiMae/loggerhead-luminancies",
+    "sources": "https://github.com/HestiMae/loggerhead-luminancies",
+    "issues": "https://github.com/HestiMae/loggerhead-luminancies"
+  },
+  "license": "MIT",
+  "icon": "assets/loggerhead_luminancies/icon.png",
+  "entrypoints": {
+    "main": [
+      "garden.hestia.loggerhead_luminancies.LoggerheadLuminancies"
+    ],
+    "client": [
+      "garden.hestia.loggerhead_luminancies.client.LoggerheadLuminanciesClient"
+    ]
+  },
+  "mixins": [
+    "loggerhead_luminancies.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fl}",
+    "fabric-api": ">=${fapi}",
+    "minecraft": ">=${mc}"
+  }
+}
