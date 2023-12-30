@@ -12,5 +12,6 @@ public class LoggerheadLuminanciesClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ScuteLanternBlockEntityRenderer.SCUTE_LANTERN_MODEL_LAYER, ScuteLanternBlockEntityRenderer::getTextureModelData);
 
         BlockEntityRendererFactories.register(LoggerheadLuminancies.SCUTE_LANTERN_BLOCK_ENTITY_TYPE, ScuteLanternBlockEntityRenderer::new);
+
     }
 }
