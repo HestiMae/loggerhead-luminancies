@@ -15,7 +15,7 @@ plugins {
 
 version = "$project.baseVersion+$project.branch"
 archivesBaseName = project.name
-group = 'folk.sisby'
+group = 'garden.hestia'
 
 repositories {
 	mavenLocal()
@@ -90,7 +90,7 @@ if (System.getenv("GITHUB_TOKEN")) {
 	githubRelease {
 		token System.getenv("GITHUB_TOKEN")
 		owner "HestiMae"
-		repo "loggerhead-luminancies"
+		repo 'loggerhead-luminancies'
 		tagName 'v' + baseVersion
 		releaseName baseVersion
 		targetCommitish defaultBranch

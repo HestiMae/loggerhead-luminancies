@@ -1,7 +1,7 @@
 [versions]
 loom = "1.4.+"
 githubRelease = "2.4.1"
-minotaur = "2.6.0"
+minotaur = "2.8.7"
 
 mc = "1.20.4"
 fl = "0.15.2"
