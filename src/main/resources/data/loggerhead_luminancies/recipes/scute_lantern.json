@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ksk",
+    "klk",
+    "ksk"
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:sea_lantern"
+    },
+    "s": {
+      "item": "minecraft:scute"
+    },
+    "k": {
+      "item": "minecraft:kelp"
+    }
+  },
+  "result": {
+    "item": "loggerhead_luminancies:scute_lantern",
+    "count": 4
+  }
+}

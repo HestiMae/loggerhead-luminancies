@@ -7,10 +7,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 public class ScuteLanternBlock extends BlockWithEntity {
@@ -41,5 +43,9 @@ public class ScuteLanternBlock extends BlockWithEntity {
         return VoxelShapes.cuboid(0, -0.2, 0, 1, 0.4, 1);
     }
 
-
+    @Override
+    public boolean canPlaceAt(BlockState blockState, WorldView worldView, BlockPos blockPos) {
+        BlockPos below = blockPos.down();
+        return worldView.getFluidState(blockPos).getFluid() == Fluids.EMPTY && worldView.getFluidState(below).getFluid() == Fluids.WATER;
+    }
 }

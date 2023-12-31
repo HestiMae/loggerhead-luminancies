@@ -1,3 +1,12 @@
 {
-	"parent": "loggerhead_luminancies:block/scute_lantern"
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"down": "loggerhead_luminancies:block/scute_lantern_bottom",
+		"up": "loggerhead_luminancies:block/scute_lantern_top",
+		"particle": "loggerhead_luminancies:block/scute_lantern_top",
+		"east": "loggerhead_luminancies:block/scute_lantern_back",
+		"north": "loggerhead_luminancies:block/scute_lantern_left",
+		"south": "loggerhead_luminancies:block/scute_lantern_right",
+		"west": "loggerhead_luminancies:block/scute_lantern_front"
+	}
 }

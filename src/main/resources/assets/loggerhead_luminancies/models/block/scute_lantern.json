@@ -1,6 +1,3 @@
 {
-	"parent": "minecraft:block/cube_all",
-	"textures": {
-		"all": "loggerhead_luminancies:block/scute_lantern"
-	}
+	"parent": "minecraft:block/cube_all"
 }
