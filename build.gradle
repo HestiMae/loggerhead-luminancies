@@ -79,6 +79,7 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		loaders = ['quilt', 'fabric']
 		detectLoaders = false
 		dependencies {
+			project 'fabric-api'
 		}
 		changelog = "Changelog: https://github.com/HestiMae/loggerhead-luminancies/releases/tag/v" + baseVersion
 		syncBodyFrom = rootProject.file("README.md").text
