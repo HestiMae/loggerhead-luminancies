@@ -1,3 +1,6 @@
 {
-	"parent": "minecraft:block/cube_all"
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"particle": "loggerhead_luminancies:block/scute_lantern_right"
+	}
 }

@@ -23,8 +23,7 @@ public class ScuteLanternBlockEntityRenderer implements BlockEntityRenderer<Scut
     }
     @Override
     public void render(ScuteLanternBlockEntity blockEntity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay) {
-        long time = blockEntity.getWorld().getTime();
-        double tick = time + tickDelta;
+        double tick = blockEntity.timeAlive + tickDelta;
         double yOffset = Math.sin(tick/10.0F)/5.0F - 0.4F;
         matrixStack.translate(0, yOffset, 0);
         this.root.render(matrixStack, SCUTE_LANTERN_TEXTURE.getVertexConsumer(vertexConsumerProvider, RenderLayer::getEntitySolid), light, overlay);
