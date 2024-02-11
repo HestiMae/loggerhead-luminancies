@@ -22,7 +22,7 @@ import net.minecraft.util.Util;
 public class LoggerheadLuminancies implements ModInitializer {
     private static final String ID = "loggerhead_luminancies";
 
-    public static final Block SCUTE_LANTERN = Registry.register(Registries.BLOCK, LoggerheadLuminancies.id("scute_lantern"), new ScuteLanternBlock(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).nonOpaque().noCollision()));
+    public static final Block SCUTE_LANTERN = Registry.register(Registries.BLOCK, LoggerheadLuminancies.id("scute_lantern"), new ScuteLanternBlock(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).nonOpaque()));
     public static final BlockEntityType<ScuteLanternBlockEntity> SCUTE_LANTERN_BLOCK_ENTITY_TYPE = Registry.register(Registries.BLOCK_ENTITY_TYPE, LoggerheadLuminancies.id("scute_lantern"), BlockEntityType.Builder.create(ScuteLanternBlockEntity::new, SCUTE_LANTERN).build(Util.getChoiceType(TypeReferences.BLOCK_ENTITY, "scute_lantern")));
     public static final BlockItem SCUTE_LANTERN_ITEM = Registry.register(Registries.ITEM, LoggerheadLuminancies.id("scute_lantern"), new PlaceableOnWaterItem(SCUTE_LANTERN, new FabricItemSettings()));
     @Override
