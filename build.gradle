@@ -79,9 +79,9 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		loaders = ['quilt', 'fabric']
 		detectLoaders = false
 		dependencies {
-			project 'fabric-api'
+			required.version libs.fapi.get().getName(), libs.versions.fapi.get()
 		}
-		changelog = "Changelog: https://github.com/HestiMae/loggerhead-luminancies/releases/tag/v" + baseVersion
+		changelog = rootProject.file("CHANGELOG.md").text + "\n\nChangelog: https://github.com/HestiMae/loggerhead-luminancies/releases/tag/v" + baseVersion
 		syncBodyFrom = rootProject.file("README.md").text
 	}
 }
@@ -100,6 +100,7 @@ if (System.getenv("GITHUB_TOKEN")) {
 		releaseAssets remapJar.archiveFile
 		allowUploadToExisting true
 		generateReleaseNotes true
+		body rootProject.file("CHANGELOG.md").text + "\n"
 	}
 	tasks.githubRelease.dependsOn remapJar
 }
